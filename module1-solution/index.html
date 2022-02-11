@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="LunchCalculator">
+<head>
+    <!-- <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <title>Angular App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <script src='angular.min.js'></script>
+    <script src='app.js'></script>
+    
+</head>
+<body > 
+    <h1>My First Angular App</h1>
+    <div ng-controller="LunchCheckController">
+        Enter your name:
+     <input type="text" ng-model="LuchList" >
+     <button ng-click="CheckMyLunch()">Check If Too Much</button><br><br>
+     <div>{{LunchMsg}}</div>
+    </div>
+    
+</body>
+</html>
