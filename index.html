@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="NameCalculator">
+<html ng-app="MenuApp">
 <head>
     <!-- <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
@@ -12,11 +12,15 @@
 </head>
 <body > 
     <h1>My First Angular App</h1>
-    <div ng-controller="NameCalculatorController">
-        Enter your name:
-     <input type="text" ng-model="name" ng-blur="upperCaseMe()">
-     
+
+    <div ng-controller="MenuCategoryContoller as menu">
+
+     <ol>
+        <list-items ng-repeat="items in menu.categories"></list-items>
+     </ol>
+    
     </div>
+
     
 </body>
 </html>
