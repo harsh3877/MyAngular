@@ -28,7 +28,7 @@
     
     function MenuCategoryContoller(MenuCategoryService){
        var menu = this;
-
+        console.log('run');
        var promise = MenuCategoryService.getMenuCategory();
 
        promise.then(function(response){
