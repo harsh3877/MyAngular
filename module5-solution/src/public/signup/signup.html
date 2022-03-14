@@ -1,0 +1,29 @@
+<div class="container">
+    <center><h1>Sign up here</h1></center>
+    <form>
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input ng-model="savedata.name" type="text" class="form-control" id="fname" aria-describedby="emailHelp" placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input ng-model="savedata.lname" type="text" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input ng-model="savedata.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="pn">Phone Number</label>
+            <input ng-model="savedata.pn" type="text" class="form-control" id="pn" aria-describedby="emailHelp" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="FavNum">Fav Dish Menu Number</label>
+            <input type="text" ng-model="savedata.shortName" class="form-control" id="FavNum" aria-describedby="emailHelp" placeholder="Enter Menu Number">
+            <small id="helpMe" class="form-text " ng-if="savedata.msgResponse">{{savedata.msg}}</small>
+        </div>
+        <button type="submit" ng-click="savedata.saveData()" class="btn btn-primary">Submit</button>
+      </form>
+
+      
+</div>
