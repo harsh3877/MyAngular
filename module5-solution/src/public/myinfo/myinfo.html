@@ -1,0 +1,33 @@
+<div class="container">
+    <div ng-if="info.dataPresent.length>0">
+        Name: {{info.name}} <br>
+        Last name: {{info.lname}}<br>
+        Email: {{info.email}}<br>
+        Phone: {{info.phone}}<br>
+
+        <div ng-repeat="item in info.Items">
+        
+        
+                    <div class="menu-item-tile col-md-6">
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <div class="menu-item-photo">
+                              <div>{{item.short_name}}</div>
+                              <img class="img-responsive" width="250" height="150" ng-src="{{info.basePath}}/images/{{item.short_name}}.jpg" alt="{{item.name}}">
+                            </div>
+                            <div class="menu-item-price">{{item.price_small | currency}}<span> {{item.small_portion_name}}</span> {{item.price_large | currency}} <span>{{item.large_portion_name}}</span></div>
+                          </div>
+                          <div class="menu-item-description col-sm-7">
+                            <h3 class="menu-item-title">{{item.name}}</h3>
+                            <p class="menu-item-details">{{item.description}}</p>
+                          </div>
+                        </div>
+                        <hr class="visible-xs">
+                      </div>
+           
+           
+        </div>
+    </div>
+    <span ng-if="!info.dataPresent">Not Signed Up Yet. Sign up Now!   -->  <a ui-sref="public.signup">Cilick here</a></span>
+    
+</div>
